@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FC36521-ED93-4475-9064-BCF2728AEEF5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyContext</RootNamespace>
+    <AssemblyName>MyContext</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\aisino_mesContext.cs" />
+    <Compile Include="Models\AssayDetail.cs" />
+    <Compile Include="Models\AssayMaster.cs" />
+    <Compile Include="Models\AssayMasterResult.cs" />
+    <Compile Include="Models\AssayResult.cs" />
+    <Compile Include="Models\BomDetail.cs" />
+    <Compile Include="Models\BomDetailSection.cs" />
+    <Compile Include="Models\BomMaster.cs" />
+    <Compile Include="Models\BomSubsidiary.cs" />
+    <Compile Include="Models\BorGroupMaster.cs" />
+    <Compile Include="Models\BorLine.cs" />
+    <Compile Include="Models\BorLineSection.cs" />
+    <Compile Include="Models\BorSection.cs" />
+    <Compile Include="Models\BorSectionEquipment.cs" />
+    <Compile Include="Models\BorType.cs" />
+    <Compile Include="Models\BusinessCustomer.cs" />
+    <Compile Include="Models\CusAndCardInfor.cs" />
+    <Compile Include="Models\CustomerRechargeInfor.cs" />
+    <Compile Include="Models\CustomerRechargeRecord.cs" />
+    <Compile Include="Models\CustomerTransactionInfor.cs" />
+    <Compile Include="Models\DCSExchange.cs" />
+    <Compile Include="Models\DCSManu.cs" />
+    <Compile Include="Models\DCSPurchase.cs" />
+    <Compile Include="Models\DCSSale.cs" />
+    <Compile Include="Models\DeductIndex.cs" />
+    <Compile Include="Models\District.cs" />
+    <Compile Include="Models\Equipment.cs" />
+    <Compile Include="Models\EquipmentMaintReason.cs" />
+    <Compile Include="Models\EquipmentMaintReasonType.cs" />
+    <Compile Include="Models\EquipmentType.cs" />
+    <Compile Include="Models\GrainCharacter.cs" />
+    <Compile Include="Models\InvmasDeductIndex.cs" />
+    <Compile Include="Models\InvmasQualityIndex.cs" />
+    <Compile Include="Models\LipaDensityInfo.cs" />
+    <Compile Include="Models\ManuPlanTask.cs" />
+    <Compile Include="Models\ManuPlanTaskBatch.cs" />
+    <Compile Include="Models\ManuPlanTaskBatchInWarehouse.cs" />
+    <Compile Include="Models\ManuPlanTaskBatchOutWarehouse.cs" />
+    <Compile Include="Models\ManuPlanTaskBatchTransDetail.cs" />
+    <Compile Include="Models\ManuPlanTaskBom.cs" />
+    <Compile Include="Models\Mapping\AssayDetailMap.cs" />
+    <Compile Include="Models\Mapping\AssayMasterMap.cs" />
+    <Compile Include="Models\Mapping\AssayMasterResultMap.cs" />
+    <Compile Include="Models\Mapping\AssayResultMap.cs" />
+    <Compile Include="Models\Mapping\BomDetailMap.cs" />
+    <Compile Include="Models\Mapping\BomDetailSectionMap.cs" />
+    <Compile Include="Models\Mapping\BomMasterMap.cs" />
+    <Compile Include="Models\Mapping\BomSubsidiaryMap.cs" />
+    <Compile Include="Models\Mapping\BorGroupMasterMap.cs" />
+    <Compile Include="Models\Mapping\BorLineMap.cs" />
+    <Compile Include="Models\Mapping\BorLineSectionMap.cs" />
+    <Compile Include="Models\Mapping\BorSectionEquipmentMap.cs" />
+    <Compile Include="Models\Mapping\BorSectionMap.cs" />
+    <Compile Include="Models\Mapping\BorTypeMap.cs" />
+    <Compile Include="Models\Mapping\BusinessCustomerMap.cs" />
+    <Compile Include="Models\Mapping\CusAndCardInforMap.cs" />
+    <Compile Include="Models\Mapping\CustomerRechargeInforMap.cs" />
+    <Compile Include="Models\Mapping\CustomerRechargeRecordMap.cs" />
+    <Compile Include="Models\Mapping\CustomerTransactionInforMap.cs" />
+    <Compile Include="Models\Mapping\DCSExchangeMap.cs" />
+    <Compile Include="Models\Mapping\DCSManuMap.cs" />
+    <Compile Include="Models\Mapping\DCSPurchaseMap.cs" />
+    <Compile Include="Models\Mapping\DCSSaleMap.cs" />
+    <Compile Include="Models\Mapping\DeductIndexMap.cs" />
+    <Compile Include="Models\Mapping\DistrictMap.cs" />
+    <Compile Include="Models\Mapping\EquipmentMaintReasonMap.cs" />
+    <Compile Include="Models\Mapping\EquipmentMaintReasonTypeMap.cs" />
+    <Compile Include="Models\Mapping\EquipmentMap.cs" />
+    <Compile Include="Models\Mapping\EquipmentTypeMap.cs" />
+    <Compile Include="Models\Mapping\GrainCharacterMap.cs" />
+    <Compile Include="Models\Mapping\InvmasDeductIndexMap.cs" />
+    <Compile Include="Models\Mapping\InvmasQualityIndexMap.cs" />
+    <Compile Include="Models\Mapping\LipaDensityInfoMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskBatchInWarehouseMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskBatchMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskBatchOutWarehouseMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskBatchTransDetailMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskBomMap.cs" />
+    <Compile Include="Models\Mapping\ManuPlanTaskMap.cs" />
+    <Compile Include="Models\Mapping\PlanTaskTypeInOutDetailMap.cs" />
+    <Compile Include="Models\Mapping\PlanTaskTypeMap.cs" />
+    <Compile Include="Models\Mapping\QualityBaseCodeMap.cs" />
+    <Compile Include="Models\Mapping\QualityBaseConfigMap.cs" />
+    <Compile Include="Models\Mapping\QualityGradeIndexMap.cs" />
+    <Compile Include="Models\Mapping\QualityGradeMap.cs" />
+    <Compile Include="Models\Mapping\QualityIndexMap.cs" />
+    <Compile Include="Models\Mapping\QualityStandardMap.cs" />
+    <Compile Include="Models\Mapping\RFIDTagMap.cs" />
+    <Compile Include="Models\Mapping\SampleDetailMap.cs" />
+    <Compile Include="Models\Mapping\SampleMasterMap.cs" />
+    <Compile Include="Models\Mapping\SampleTypeMap.cs" />
+    <Compile Include="Models\Mapping\SysBillNoMap.cs" />
+    <Compile Include="Models\Mapping\SysCodeMap.cs" />
+    <Compile Include="Models\Mapping\SysCompanyInfoMap.cs" />
+    <Compile Include="Models\Mapping\SysDepartmentMap.cs" />
+    <Compile Include="Models\Mapping\SysFunctionMap.cs" />
+    <Compile Include="Models\Mapping\SysHardwareConfigMap.cs" />
+    <Compile Include="Models\Mapping\SysLogInfoMap.cs" />
+    <Compile Include="Models\Mapping\SysMenuMap.cs" />
+    <Compile Include="Models\Mapping\SysModuleMap.cs" />
+    <Compile Include="Models\Mapping\SysRightMap.cs" />
+    <Compile Include="Models\Mapping\SysRoleMap.cs" />
+    <Compile Include="Models\Mapping\SysRoleUserMap.cs" />
+    <Compile Include="Models\Mapping\SysSubSystemMap.cs" />
+    <Compile Include="Models\Mapping\SysUserFavoriteMap.cs" />
+    <Compile Include="Models\Mapping\SysUserMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseAllocationMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseAmountMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseAmountTransDetailMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseBaseConfigMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseBatchDetailMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseBatchMasterMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseCarryOverByDayMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseCarryOverByMonthMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseDefaultOilMachineMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseDetailMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseInvclMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseInvmaMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseInvmasCharacterMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseInvmasDetailMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseLocationMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseTransactionDetailMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseTransactionMasterMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseTransactionOperatorLogMap.cs" />
+    <Compile Include="Models\Mapping\WarehousetransInforMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseTypeMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseUnitConversionMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseUnitMap.cs" />
+    <Compile Include="Models\Mapping\WarehouseUnitTypeMap.cs" />
+    <Compile Include="Models\PlanTaskType.cs" />
+    <Compile Include="Models\PlanTaskTypeInOutDetail.cs" />
+    <Compile Include="Models\QualityBaseCode.cs" />
+    <Compile Include="Models\QualityBaseConfig.cs" />
+    <Compile Include="Models\QualityGrade.cs" />
+    <Compile Include="Models\QualityGradeIndex.cs" />
+    <Compile Include="Models\QualityIndex.cs" />
+    <Compile Include="Models\QualityStandard.cs" />
+    <Compile Include="Models\RFIDTag.cs" />
+    <Compile Include="Models\SampleDetail.cs" />
+    <Compile Include="Models\SampleMaster.cs" />
+    <Compile Include="Models\SampleType.cs" />
+    <Compile Include="Models\SysBillNo.cs" />
+    <Compile Include="Models\SysCode.cs" />
+    <Compile Include="Models\SysCompanyInfo.cs" />
+    <Compile Include="Models\SysDepartment.cs" />
+    <Compile Include="Models\SysFunction.cs" />
+    <Compile Include="Models\SysHardwareConfig.cs" />
+    <Compile Include="Models\SysLogInfo.cs" />
+    <Compile Include="Models\SysMenu.cs" />
+    <Compile Include="Models\SysModule.cs" />
+    <Compile Include="Models\SysRight.cs" />
+    <Compile Include="Models\SysRole.cs" />
+    <Compile Include="Models\SysRoleUser.cs" />
+    <Compile Include="Models\SysSubSystem.cs" />
+    <Compile Include="Models\SysUser.cs" />
+    <Compile Include="Models\SysUserFavorite.cs" />
+    <Compile Include="Models\Warehouse.cs" />
+    <Compile Include="Models\WarehouseAllocation.cs" />
+    <Compile Include="Models\WarehouseAmount.cs" />
+    <Compile Include="Models\WarehouseAmountTransDetail.cs" />
+    <Compile Include="Models\WarehouseBaseConfig.cs" />
+    <Compile Include="Models\WarehouseBatchDetail.cs" />
+    <Compile Include="Models\WarehouseBatchMaster.cs" />
+    <Compile Include="Models\WarehouseCarryOverByDay.cs" />
+    <Compile Include="Models\WarehouseCarryOverByMonth.cs" />
+    <Compile Include="Models\WarehouseDefaultOilMachine.cs" />
+    <Compile Include="Models\WarehouseDetail.cs" />
+    <Compile Include="Models\WarehouseInvcl.cs" />
+    <Compile Include="Models\WarehouseInvma.cs" />
+    <Compile Include="Models\WarehouseInvmasCharacter.cs" />
+    <Compile Include="Models\WarehouseInvmasDetail.cs" />
+    <Compile Include="Models\WarehouseLocation.cs" />
+    <Compile Include="Models\WarehouseTransactionDetail.cs" />
+    <Compile Include="Models\WarehouseTransactionMaster.cs" />
+    <Compile Include="Models\WarehouseTransactionOperatorLog.cs" />
+    <Compile Include="Models\WarehousetransInfor.cs" />
+    <Compile Include="Models\WarehouseType.cs" />
+    <Compile Include="Models\WarehouseUnit.cs" />
+    <Compile Include="Models\WarehouseUnitConversion.cs" />
+    <Compile Include="Models\WarehouseUnitType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
