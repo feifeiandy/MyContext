@@ -12,6 +12,7 @@ namespace MyContext
         static void Main(string[] args)
         {
             #region ToList() Local 的区别
+            //ToList每次查询数据库，Local每次查询内存
             aisino_mesContext MyContext = new aisino_mesContext();
             int listcont = MyContext.SysRoles.ToList().Count();
             Console.WriteLine("添加实体之前" + listcont);
@@ -31,6 +32,14 @@ namespace MyContext
             #endregion
 
 
+            #region 集合中添加实体（外键），默认相关主键的自动添加
+            SysRoleUser sysRoleUser = new SysRoleUser();
+            sysRoleUser.RoleCode = "121";
+            sysRoleUser.UserCode = "11";
+            sysRoleUser.SysRole = sys;
+            MyContext.SysRoleUsers.Add(sysRoleUser);
+            MyContext.SaveChanges(); 
+            #endregion
 
         }
     }
