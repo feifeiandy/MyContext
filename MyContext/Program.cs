@@ -51,12 +51,12 @@ namespace MyContext
             //MyContext.SaveChanges();
             //#endregion
 
-            #region 级联删除 一对多
-            var wf = MyContext.SysRoles.Find("wf");
-            MyContext.Entry(wf).Collection("SysRights").Load();
-            MyContext.SysRoles.Remove(wf);
-            MyContext.SaveChanges(); 
-            #endregion
+            //#region 级联删除 一对多
+            //var wf = MyContext.SysRoles.Find("wf");
+            //MyContext.Entry(wf).Collection("SysRights").Load();
+            //MyContext.SysRoles.Remove(wf);
+            //MyContext.SaveChanges(); 
+            //#endregion
         }
     }
 }
