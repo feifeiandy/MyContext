@@ -44,11 +44,18 @@ namespace MyContext
             //#endregion
 
 
-            #region 级联删除
-            var a = MyContext.SysRoleUsers.Single(c => c.RoleCode == "121");
-            var b = MyContext.SysRoles.Find("121");
-            MyContext.SysRoles.Remove(b);
-            MyContext.SaveChanges();
+            //#region 级联删除 一对一
+            //var a = MyContext.SysRoleUsers.Single(c => c.RoleCode == "121");
+            //var b = MyContext.SysRoles.Find("121");
+            //MyContext.SysRoles.Remove(b);
+            //MyContext.SaveChanges();
+            //#endregion
+
+            #region 级联删除 一对多
+            var wf = MyContext.SysRoles.Find("wf");
+            MyContext.Entry(wf).Collection("SysRights").Load();
+            MyContext.SysRoles.Remove(wf);
+            MyContext.SaveChanges(); 
             #endregion
         }
     }
